@@ -6,3 +6,11 @@
   <li>Population: <%= number_to_human(@country.population) %></li>
   <li>Language: <%= @country.language %></li>
 </ul>
+<h2>Convert Currency</h2>
+<%= form_tag(country_path, method: :get) do %>
+  <p>Enter amount in Sterling:
+  <%= text_field_tag :inputnumber %>
+  <%= submit_tag "go" %>
+<% end %>
+<% calculation = params['inputnumber']*@country.exchange_rate if params['inputnumber']%>
+<%= "That'll be #{@country.currency}#{(@country.exchange_rate*params['inputnumber'].to_f).round(2)}" if params['inputnumber'] %>

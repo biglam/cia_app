@@ -36,7 +36,7 @@ class CountriesController < ApplicationController
 
   private 
   def whitelister
-    params.require(:country).permit(:name, :flag, :population, :size, :language)
+    params.require(:country).permit(:name, :flag, :population, :size, :language, :currency, :exchange_rate)
   end 
 
 end
