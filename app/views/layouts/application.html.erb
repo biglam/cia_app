@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CiaApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header-wrapper">
+<div id="logo"><h1>CIA mega secret app</h1></div>
+<h2>Our unhackable resource where we keep tabs on the world!</h2>
+</div>
+<div id="menu">
+<br><%= link_to('Countries list', countries_path) %>
+<%= link_to('New Country', new_country_path) %>
+</div>
+<div id="page-wrapper">
+<%= yield %>
+</div>
+<div id="copyright"><p>Since this is totally secure in every way, don't tell your friends!</p></div>
+</body>
+</html>
