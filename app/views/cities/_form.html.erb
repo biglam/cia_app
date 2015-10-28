@@ -6,7 +6,7 @@
   <%= f.text_field :population %>
   <br>
   <%= f.label :country_id %>
-  <%= f.collection_select :country_id, Country.order(:name),:id,:name, include_blank: true %>
+  <%= f.collection_select :country_id, Country.order(:name),:id,:name, include_blank: false %>
   <br>
   <%= f.label :photo %>
   <%= f.text_field :photo %>
