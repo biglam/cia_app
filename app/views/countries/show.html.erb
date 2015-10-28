@@ -1,11 +1,5 @@
-<h2><%= @country.name %></h2>
-<%= image_tag(@country.flag, width: 250) %>
-<ul>
-  <li>Name: <%= @country.name %></li>
-  <li>Size: <%= number_to_human(@country.size) %> KM</li>
-  <li>Population: <%= number_to_human(@country.population) %></li>
-  <li>Language: <%= @country.language %></li>
-</ul>
+<%= render partial: 'countrydetails', object: @country %>
+
 <h2>Convert Currency</h2>
 <%= form_tag(country_path, method: :get) do %>
   <p>Enter amount in Sterling:
@@ -14,3 +8,6 @@
 <% end %>
 <% calculation = params['inputnumber']*@country.exchange_rate if params['inputnumber']%>
 <%= "That'll be #{@country.currency}#{(@country.exchange_rate*params['inputnumber'].to_f).round(2)}" if params['inputnumber'] %>
+
+
+<%= render partial: 'listcities', object: @country %>

@@ -312,7 +312,7 @@
 
   }
 
-  #header-wrapper h2 {
+  #header-wrapper h2, #header-wrapper h3 {
     color:white;
   }
 

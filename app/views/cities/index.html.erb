@@ -1,0 +1,18 @@
+<table>
+  <tr> 
+    <th>Name</th>
+    <th>Country</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  
+<% @cities.each do |city| %>
+  <tr>
+    <td><%= link_to(city.name, city_path(city)) %></td>
+    <td><%= city.country.name %></td>
+    <td><%= link_to('Edit', edit_city_path(city)) %></td>
+    <td><%= link_to('Delete', city_path(city), method: :delete) %></td>
+  </tr>
+<% end %>
+
+</table>

@@ -1,0 +1,15 @@
+<%= form_for @city do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :population %>
+  <%= f.text_field :population %>
+  <br>
+  <%= f.label :country_id %>
+  <%= f.collection_select :country_id, Country.order(:name),:id,:name, include_blank: true %>
+  <br>
+  <%= f.label :photo %>
+  <%= f.text_field :photo %>
+  <br>
+  <%= f.submit button_text %>
+  <% end %>
