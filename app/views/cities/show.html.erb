@@ -1,5 +1,6 @@
 <h1>Name: <%= @city.name %></h1>
 
 <strong>Population: </strong><%= @city.population %>
-<%= image_tag(@city.photo) if @city.photo %>
+
 <strong>Country: </strong> <%= link_to(@city.country.name, country_path(@city.country)) %>
+<br><%= image_tag(@city.photo) if @city.photo %>

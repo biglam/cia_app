@@ -20,10 +20,10 @@ rus = Country.first(4).last
 jap = Country.first(5).last
 
 
-City.create!(name: 'Edinburgh', population: 492680, country: uk)
-City.create!(name: 'London', population: 8358869, country: uk)
-City.create!(name: 'Helsinki', population: 602305, country: fin)
-City.create!(name: 'New York', population: 88491049, country: usa)
-City.create!(name: 'Tokyo', population: 13230000, country: jap)
-City.create!(name: 'Moscow', population: 11918457, country: rus)
-City.create!(name: 'Turku', population: 185322, country: fin)
+City.create!(name: 'Edinburgh', population: 492680, photo: 'http://images.hotels-world.com/2//org/825/hotelPhoto/425_Barcelo_Edinburgh_Carlton_Hotel.jpg', country_id: uk.id)
+City.create!(name: 'London', population: 8358869, country_id: uk.id)
+City.create!(name: 'Helsinki', photo: 'http://foto.hrsstatic.com/fotos/0/3/256/256/80/000000/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F0%2F0%2F1%2F1%2F001111%2F001111_u_10279971.jpg/pEAnPIk8uTN2C5daRmnyug%3D%3D/640,427/6/HOTEL_SEURAHUONE_HELSINKI-Helsinki-Info-7-1111.jpg',population: 602305, country_id: fin.id)
+City.create!(name: 'New York', photo: 'https://pbs.twimg.com/profile_images/587571943513137152/amdnGVqf_400x400.jpg', population: 88491049, country_id: usa.id)
+City.create!(name: 'Tokyo', population: 13230000, country_id: jap.id)
+City.create!(name: 'Moscow', population: 11918457, country_id: rus.id)
+City.create!(name: 'Turku', population: 185322, country_id: fin.id)
